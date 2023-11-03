@@ -1,4 +1,4 @@
-name: 💪Test Workflow
+name: Test Workflow
 
 on:
   workflow_dispatch:
@@ -12,15 +12,15 @@ on:
 
 jobs:
   test-job:
-    name: 🫡Test Job
+    name: Test Job
     runs-on: ubuntu-latest
     environment: ${{ inputs.environment }}
     steps:
-      - name: 🪜Test Step
+      - name: 🪜 Test Step
         run: echo "This is a test step 🪜"
 
-      - name: ☁️Print environment
+      - name: ☁️ Print environment
         run: echo "environment = ${{ inputs.environment }}"
 
-      - name: 🤫Print secret
+      - name: 🤫 Print secret
         run: echo "AWS account ID = ${{ secrets.AWS_ACCOUNT_ID }}"
