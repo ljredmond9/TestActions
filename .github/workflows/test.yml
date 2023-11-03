@@ -1,0 +1,20 @@
+name: 💪Test Workflow
+
+on:
+  workflow_dispatch:
+    inputs:
+      environment:
+        description: The environment to use
+        type: choice
+        options:
+          - dev
+          - prod
+
+jobs:
+  test-job:
+    name: 🫡Test Job
+    runs-on: linux
+    environment: ${{ inputs.environment }}
+    steps:
+      - name: 🪜Test Step
+        run: echo "This is a test step 🪜"
