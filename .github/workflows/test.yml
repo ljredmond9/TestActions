@@ -18,3 +18,9 @@ jobs:
     steps:
       - name: 🪜Test Step
         run: echo "This is a test step 🪜"
+
+      - name: ☁️Print environment
+        run: echo "environment = ${{ inputs.environment }}"
+
+      - name: 🤫Print secret
+        run: echo "AWS account ID = ${{ secrets.AWS_ACCOUNT_ID }}"
